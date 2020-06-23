@@ -1,0 +1,18 @@
+apiVersion: apps/v1 
+kind: Deployment
+metadata:
+  name: swimmerms-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+       name: swimmer-app
+  template:
+    metadata:
+      name: swimmer-app
+      labels:
+        name: swimmer-app 
+    spec: 
+      containers:
+       - name: swimmer-app
+         image: swimmerms:dev-1.0.0

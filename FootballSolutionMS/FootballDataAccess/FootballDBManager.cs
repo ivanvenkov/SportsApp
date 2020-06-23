@@ -22,6 +22,7 @@ namespace FootballDataAccess
         {
             int nextId = await this.GetNextValueAsync();
             footballPerson.Id = nextId;
+            await this.footballDbContext.FootballPersons.AddAsync(footballPerson);
             await footballDbContext.SaveChangesAsync();
             return footballPerson.Id;
         }

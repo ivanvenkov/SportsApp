@@ -9,8 +9,8 @@ using Oracle.EntityFrameworkCore.Metadata;
 namespace FootballDataAccess.Migrations
 {
     [DbContext(typeof(FootballDbContext))]
-    [Migration("20200612132417_initial")]
-    partial class initial
+    [Migration("20200622174253_ini100")]
+    partial class ini100
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

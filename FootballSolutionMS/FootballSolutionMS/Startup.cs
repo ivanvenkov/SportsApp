@@ -24,6 +24,7 @@ namespace FootballSolutionMS
             services.AddControllers();
 
             string connString = Configuration["Connection_String"];
+            // services.AddDbContext<FootballDbContext>(options => options.UseSqlServer(connString));
             services.AddDbContext<FootballDbContext>(options => options.UseOracle(connString));
             services.ResolveServices();
 

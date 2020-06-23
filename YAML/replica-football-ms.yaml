@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: football-app-rs
+  labels:
+    type: football-ms
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      name: footballms-app
+  template:
+    metadata:
+      name: footballms-app
+      labels:
+        name: footballms-app
+    spec:
+      containers:
+        - name: footballms-app
+          image: fms:dev-1.0.0

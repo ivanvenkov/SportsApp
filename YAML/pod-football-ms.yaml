@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: footballms-app
+  labels: 
+    name: footballms-app
+spec:
+  containers:
+  - name: footballms-app
+    image: fms:dev-1.0.0

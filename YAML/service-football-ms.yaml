@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: footballms
+spec:
+  type: NodePort
+  selector:
+    name: footballms-app
+  ports:
+  - port: 80
+    nodePort: 30004
+    targetPort: 80
+    name: unsecure
+  - port: 443
+    nodePort: 30005
+    targetPort: 443
+    name: secure

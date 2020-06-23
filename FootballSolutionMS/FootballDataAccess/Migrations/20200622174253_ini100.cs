@@ -3,7 +3,7 @@ using Oracle.EntityFrameworkCore.Metadata;
 
 namespace FootballDataAccess.Migrations
 {
-    public partial class initial : Migration
+    public partial class ini100 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
